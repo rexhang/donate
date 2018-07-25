@@ -1,7 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+#### This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-# donate App.
+## `donate App`.
 
-## @author rexhang create at 2018.6.3.
+##### @author rexhang create at 2018.6.3.
 
-## [website](https://rexhang.com).
+##### welcome to my [website](https://rexhang.com/) and [blog](http://www.rexhang.com/blog/).
