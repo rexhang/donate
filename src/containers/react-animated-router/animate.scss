@@ -1,0 +1,57 @@
+$prefix: animated-router !default;
+
+.#{$prefix} {
+    &-container {
+        /* 动画容器节点 */
+    }
+
+    &-in-transition {
+        /* 页面动画中 */
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /** START: 自定义进出场动画 **/
+    &-forward-enter {
+        transform: translate(100%);
+    }
+    &-forward-enter-active {
+        transform: translate(0);
+    }
+    &-forward-exit {
+        transform: translate(0);
+    }
+    &-forward-exit-active {
+        transform: translate(-100%);
+    }
+
+    &-backward-enter {
+        transform: translate(-100%);
+    }
+    &-backward-enter-active {
+        transform: translate(0);
+    }
+    &-backward-exit {
+        transform: translate(0);
+    }
+    &-backward-exit-active {
+        transform: translate(100%);
+    }
+    /** END **/
+
+    &-forward-enter-active,
+    &-forward-exit-active,
+    &-backward-enter-active,
+    &-backward-exit-active {
+        /* 不同过渡阶段需要的过渡时间与缓动效果 */
+        transition: transform .35s linear;
+    }
+    &-forward-exit,
+    &-backward-exit {
+        position: absolute !important;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+}

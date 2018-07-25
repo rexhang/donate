@@ -1,0 +1,21 @@
+{
+  "name": "app-gift",
+  "description": "",
+  "main": "",
+  "authors": [
+    "rexhang <rexhang@qq.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./src/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "css-ripple-effect": "^1.0.9"
+  }
+}

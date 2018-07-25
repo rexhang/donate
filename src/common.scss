@@ -1,0 +1,26 @@
+$browser-default-font-size: 75px !default;
+
+$browser-default-font-sizeIpad: 204.8px !default;
+
+@function rem($px){
+  @return $px / $browser-default-font-size * 1rem;
+}
+
+@function remIpad($px){
+  @return $px / $browser-default-font-sizeIpad * 1rem;
+}
+
+@mixin setfont($size, $color: #000, $align: left, $weight: 400){
+  font-size: rem($size);
+  color: $color;
+  text-align: $align;
+  font-weight: $weight;
+}
+
+@mixin setfontIpad($size, $color: #000, $align: left, $weight: 400){
+  font-size: remIpad($size);
+  color: $color;
+  text-align: $align;
+  font-weight: $weight;
+}
+

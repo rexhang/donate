@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- 设定字符编码集 -->
+    <title>跳转中…</title>
+    <!--<script src="https://interface.arseeds.com/js/vconsole.min.js"></script>-->
+    <script>
+        // var vConsole = new VConsole();
+        // console.log('Hello world');
+        function getUrlParams(params){
+            /*带解析中文的方案*/
+            var reg = new RegExp("(^|&)"+params+"=([^&]*)(&|$)");
+            var result = window.location.search.substr(1).match(reg);
+            return result?decodeURIComponent(result[2]):null;
+        }
+        var params = {
+            author: 'rexhang',
+            uid: getUrlParams('uid'),
+            is_dev: getUrlParams('is_dev'),
+            from_url: 'page4',
+            active_id: '2'
+        };
+        var _params = JSON.stringify(params);
+        var oauthAPI = '';
+        var redirectUrl = '';
+        // 授权重定向
+        location.href = oauthAPI + "?url=" + redirectUrl + "&params=" + _params;
+    </script>
+</head>
+<body>
+</body>
+</html>
